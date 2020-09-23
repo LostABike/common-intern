@@ -1,0 +1,46 @@
+﻿ANNIE DINH
+(714) 657-5069   ●  hndinh1@uci.edu  ●   github.com/lostabike  ●   linkedin.com/in/lostabike
+
+
+EDUCATION
+Bachelor of Science in Computer Science  |  University of California, Irvine        Exp. June 2021
+* Relevant Coursework: Python Programming with Libraries, Programming in C++ Data Structures, Implementation and Analysis, Data Management in SQL
+* Hackathon Participation: SB Hacks VI, QWER Hacks, AthenaHacks 2020
+* Memberships & Community Service: Women in Computer Science Club (STEM competition engagement), Association for Computing Machinery (programming practice), Power of Words and Numbers (math tutoring)
+
+
+SOFTWARE ENGINEERING PROJECTS 
+Web Search Engine  |  Information Retrieval Course        May 2020
+   * Collaborate with team of computer engineers and designers to develop and improve features and functionalities.
+   * Created intermediate web search engine and crawler to scrape collection of 50,000 websites within ICS domain.
+   * Hashed and compared content, and eliminated documents with 90%+ similarity to create an informative corpus.
+   * Hashed and indexed content against query tf-idf score to return most relevant websites to users.
+   * Optimized search operation by indexing web URLs and stemming queries to achieve query response time <300ms.
+
+
+Hand Reader  |  QWER Hacks         Jan. 2020
+   * Collaborated with cross-functional team to develop real-time hand signs tracker application to read and display sign language in English to enable signers and English speakers to communicate.
+   * Implemented machine learning in Python using Tensorflow library to train a model that can read basic hand signs.
+   * Created training data by dissecting video of hand pose into 200+ pictures, and fed pictures into API that produces and records vectors and data points.
+
+
+Bleep Radio  |  SB Hacks VI        Jan. 2020
+   * Implemented in Python using Flask for web application framework, Integrated Google text-to-speech API, lyrics retrieval API and profanity library API to remix clean version of desired song. 
+   * Designed web interface with Bootstrap.
+
+
+Minecraft Minigames  |  Personal Project        Dec. 2019
+   * Utilized Javascript, Python, and APIs to create Minecraft minigames, integrated Minecraft API to build game scenes, and designed game logic using Python to provide interactive game play and feedback. 
+   * Coded game scene around player and chicken spawn, giving player a bow and arrows and updating number of kills in chat and randomly generated sentences.
+   * Generated game scene maze around the player, triggering a green gem to randomly spawn within this maze, and requiring player to collect 5 gems within the time limit to win or otherwise fail in a losing scenario.
+
+
+MapleStory Bot  |  Personal Project        July 2019
+   * Utilized pixel tracker function to retrieve character’s coordinates and process movement in real-time.
+   * Test, iterate, and continuously optimize the bot using AutoHotkey.
+   * Develop and improve features, including disconnect detection, chat and player detection.
+   * Employed state-design and multi-threading to build multi-functional bot, automating repetitive tasks required to progress in the game, including training, farming, selling items, detecting other users' presence and chat. 
+
+
+TECHNICAL SKILLS
+Python  |  C++  |  Javascript  |  AutoHotkey  |  SQL  |  HTML  |  CSS

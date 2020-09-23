@@ -1,0 +1,43 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Unknown </title></head><body>
+<h1 id="software-engineering-job-application-bot-20-gygy34agy">Software Engineering Job Application Bot (2.0) ğŸ‘©ğŸ�¾â€�ğŸ’»</h1>
+<h4 id="5-python-projects-in-5-days-day-5-scripting">5 Python Projects in 5 Days - Day 5: Scripting</h4>
+<p>A script to automatically search Glassdoor for job listings, aggregate every application URL, and apply to each job using pre-populated data. <strong><em>All with one click!</em></strong></p>
+<p><img alt="app demo" src="demo-1.gif"/></p>
+<p><strong>ğŸ“¸YouTube Tutorial: <a href="https://youtu.be/N_7d8vg_TQA">https://youtu.be/N_7d8vg_TQA</a></strong></p>
+<h2 id="inspiration">Inspiration</h2>
+<p>Ever sit at your desk for hours, clicking through endless job listings hoping to strike gold with one response? To solve this, I made a script a few months ago, which would take in a list of job URLs and automatically apply to potentially 100s of jobs with the click of a button. This was great, but there was one problem â€” the process of aggregating those links is painstaking. So, I wanted to automate that process with this project! âœ¨</p>
+<h2 id="installation">Installation</h2>
+<ol>
+<li>Install <a href="https://sites.google.com/a/chromium.org/chromedriver/">ChromeDriver</a> (or an alternatie driver for your browser of choice):</li>
+<li>Run <code>brew cask install chromedriver</code></li>
+<li>Confirm installation: <code>chromedriver --version</code></li>
+<li>Check location of ChromeDriver: <code>which chromedriver</code></li>
+<li>Wherever the <code>driver</code> is initialized in the code, insert the ChromeDriver location</li>
+<li>Install Selenium: <code>pip install selenium</code></li>
+<li>Install BeautifulSoup: <code>pip install beautifulsoup4</code></li>
+</ol>
+<h2 id="usage">Usage</h2>
+<h4 id="to-test-get_linkspy">To test <code>get_links.py</code></h4>
+<ol>
+<li>Uncomment the last line <code>get_links.py</code></li>
+<li>Run <code>$ python get_links.py</code></li>
+</ol>
+<h4 id="to-run-the-entire-script">To run the entire script:</h4>
+<ol>
+<li>Set a number of pages you'd like to iterate through here</li>
+<li>Run <code>$ python apply.py</code></li>
+<li>The script will open <a href="https://www.glassdoor.com/index.htm">glassdoor.com</a>, at which point you should log-in</li>
+<li>From there on, everything is automatic!</li>
+</ol>
+<h2 id="thanks">Thanks</h2>
+<ul>
+<li><a href="https://selenium-python.readthedocs.io/">Selenium</a> - A tool designed for QA testing, but that actually works great for making these types of bots</li>
+<li><a href="https://www.crummy.com/software/BeautifulSoup/doc">Beautiful Soup</a> - A tool to scrape HTML/XML content (that saved be <em>big time</em> with this project)</li>
+</ul>
+<h2 id="learn-more">Learn More</h2>
+<ul>
+<li><a href="https://www.youtube.com/watch?v=nRmrEC5WnzY">My Previous Video</a> - For more background on the <code>apply.py</code> code</li>
+</ul>
+<h2 id="license">License</h2>
+<p>This project is licensed under the MIT License - see the <a href="https://github.com/harshibar/5-python-projects/blob/master/LICENSE">LICENSE.md</a> file for details.</p>
+</body></html>
