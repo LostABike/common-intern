@@ -1,4 +1,5 @@
 from selenium import webdriver
+from webdriver_manager.chrome import ChromeDriverManager
 from selenium.common.exceptions import NoSuchElementException
 from selenium.webdriver.common.keys import Keys
 import os # to get the resume file
@@ -6,36 +7,35 @@ import time # to sleep
 import get_links
 
 # sample application links if we don't want to run get_links.py
-URL_l2 = 'https://jobs.lever.co/scratch/2f09a461-f01d-4041-a369-c64c1887ed97/apply?lever-source=Glassdoor'
-URL_l3 = 'https://jobs.lever.co/fleetsmith/eb6648a6-7ad9-4f4a-9918-8b124e10c525/apply?lever-source=Glassdoor'
-URL_l4 = 'https://jobs.lever.co/stellar/0e5a506b-1964-40b4-93ab-31a1ee4e4f90/apply?lever-source=Glassdoor'
-URL_l6 = 'https://jobs.lever.co/verkada/29c66147-82ef-4293-9a6a-aeed7e6d619e/apply?lever-source=Glassdoor'
-URL_l8 = 'https://jobs.lever.co/rimeto/bdca896f-e7e7-4f27-a894-41b47c729c63/apply?lever-source=Glassdoor'
-URL_l9 = 'https://jobs.lever.co/color/20ea56b8-fed2-413c-982d-6173e336d51c/apply?lever-source=Glassdoor'
-URL_g1 = 'https://boards.greenhouse.io/instabase/jobs/4729606002?utm_campaign=google_jobs_apply&utm_source=google_jobs_apply&utm_medium=organic'
-
+# URL_l2 = 'https://jobs.lever.co/scratch/2f09a461-f01d-4041-a369-c64c1887ed97/apply?lever-source=Glassdoor'
+# URL_l3 = 'https://jobs.lever.co/fleetsmith/eb6648a6-7ad9-4f4a-9918-8b124e10c525/apply?lever-source=Glassdoor'
+# URL_l4 = 'https://jobs.lever.co/stellar/0e5a506b-1964-40b4-93ab-31a1ee4e4f90/apply?lever-source=Glassdoor'
+# URL_l6 = 'https://jobs.lever.co/verkada/29c66147-82ef-4293-9a6a-aeed7e6d619e/apply?lever-source=Glassdoor'
+# URL_l8 = 'https://jobs.lever.co/rimeto/bdca896f-e7e7-4f27-a894-41b47c729c63/apply?lever-source=Glassdoor'
+# URL_l9 = 'https://jobs.lever.co/color/20ea56b8-fed2-413c-982d-6173e336d51c/apply?lever-source=Glassdoor'
+URL_g1 = 'https://jobs.lever.co/kensho/6d510556-b646-4af6-aad5-227625d9727d/apply?lever-source=Glassdoor'
 
 # there's probably a prettier way to do all of this
 # test URLs so we don't have to call get_links
-URLS = [URL_g1, URL_l4, URL_l3, URL_l6, URL_l8, URL_l9]
+URLS = [URL_g1]
 
 # Fill in this dictionary with your personal details!
 JOB_APP = {
-    "first_name": "Foo",
-    "last_name": "Bar",
-    "email": "test@test.com",
-    "phone": "123-456-7890",
-    "org": "Self-Employed",
-    "resume": "resume.pdf",
-    "resume_textfile": "resume_short.txt",
-    "linkedin": "https://www.linkedin.com/",
-    "website": "www.youtube.com",
-    "github": "https://github.com",
-    "twitter": "www.twitter.com",
-    "location": "San Francisco, California, United States",
+    "first_name": "Annie",
+    "last_name": "Dinh",
+    "email": "hndinh1@uci.edu",
+    "phone": "715-657-5069",
+    "org": "",
+    "resume": "Resume5.pdf",
+    "resume_textfile": "Resume.txt",
+    "linkedin": "https://www.linkedin.com/lostabike",
+    "website": "",
+    "github": "https://github.com/lostabike",
+    "twitter": "",
+    "location": "Huntington Beach, California, United States",
     "grad_month": '06',
     "grad_year": '2021',
-    "university": "MIT" # if only o.O
+    "university": "University of California, Irvine"
 }
 
 # Greenhouse has a different application form structure than Lever, and thus must be parsed differently
@@ -165,12 +165,12 @@ def lever(driver):
 if __name__ == '__main__':
 
     # call get_links to automatically scrape job listings from glassdoor
-    aggregatedURLs = get_links.getURLs()
-    print(f'Job Listings: {aggregatedURLs}')
+    #aggregatedURLs = get_links.getURLs()
+    print(f'Job Listings: {URL_g1}')
     print('\n')
 
-    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-    for url in aggregatedURLs:
+    driver = webdriver.Chrome(ChromeDriverManager().install())
+    for url in URLS:
         print('\n')
 
         if 'greenhouse' in url:
@@ -195,6 +195,6 @@ if __name__ == '__main__':
             # print(f"NOT A VALID APP LINK FOR {url}")
             continue
 
-        time.sleep(1) # can lengthen this as necessary (for captcha, for example)
+        time.sleep(500000) # can lengthen this as necessary (for captcha, for example)
 
-    driver.close()
+    #driver.close()
